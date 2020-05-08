@@ -7,6 +7,7 @@ const getThemes = require("./get-themes");
 const app = express();
 const port = 3001;
 
+let counter = 0;
 cron.schedule("*/2 * * * * *", () => {
   getThemes(++counter);
 });
