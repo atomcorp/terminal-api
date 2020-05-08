@@ -62,7 +62,7 @@ const main = async () => {
       `date: ${now.toLocaleDateString()}
 total themes: ${iTerm2SchemaJson.length + customSchemaJson.length}
 =======
-  `
+`
     );
   } catch (error) {
     // eslint-disable-next-line no-console
