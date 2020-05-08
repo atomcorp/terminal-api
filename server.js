@@ -7,9 +7,15 @@ const getThemes = require("./get-themes");
 const app = express();
 const port = 3001;
 
-cron.schedule("0 0 * * *", () => {
-  getThemes();
-});
+cron.schedule(
+  "0 0 * * *",
+  () => {
+    getThemes();
+  },
+  {
+    timezone: "Europe/London",
+  }
+);
 
 app.get("/api/v1/themes", (req, res) => {
   const fileBlob = fs.readFileSync("./themes.json");
