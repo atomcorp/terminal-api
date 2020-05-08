@@ -1,3 +1,5 @@
+# Windows Terminal Themes API
+
 ## Run
 
 `yarn start`
