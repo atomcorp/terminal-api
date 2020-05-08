@@ -55,6 +55,15 @@ const main = async () => {
       "./themes.json",
       JSON.stringify(combinedSchemaJson, null, 2)
     );
+    // write log
+    const now = new Date();
+    fs.appendFileSync(
+      "log.txt",
+      `date: ${now.toLocaleDateString()}
+total themes: ${iTerm2SchemaJson.length + customSchemaJson.length}
+=======
+  `
+    );
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error);
