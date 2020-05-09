@@ -1,7 +1,7 @@
 const express = require("express");
 const cron = require("node-cron");
 const fs = require("fs");
-
+const cors = require("cors");
 const getThemes = require("./get-themes");
 
 const app = express();
@@ -21,14 +21,9 @@ cron.schedule(
   }
 );
 
-app.use((req, res, next) => {
-  if (whitelist.includes(req.get("Referer"))) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-  } else {
-    new Error("Invalid Referer");
-  }
-  next();
-});
+app.use(cors({
+  origin: 'https://atomcorp.github.io/themes/',
+}));
 
 app.get("/api/v1/themes", (req, res) => {
   const fileBlob = fs.readFileSync("./themes.json");
