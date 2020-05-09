@@ -6,6 +6,10 @@ const getThemes = require("./get-themes");
 
 const app = express();
 const port = 3001;
+const whitelist = [
+  "http://localhost:3000/themes",
+  "https://atomcorp.github.io/themes/",
+];
 
 cron.schedule(
   "0 0 * * *",
@@ -18,9 +22,13 @@ cron.schedule(
 );
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  if (whitelist.includes(req.get("Referer"))) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+  } else {
+    new Error("Invalid Referer");
+  }
   next();
-})
+});
 
 app.get("/api/v1/themes", (req, res) => {
   const fileBlob = fs.readFileSync("./themes.json");
