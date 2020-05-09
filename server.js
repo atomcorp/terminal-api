@@ -11,6 +11,11 @@ cron.schedule("0 0 * * *", () => {
   getThemes();
 });
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+})
+
 app.get("/api/v1/themes", (req, res) => {
   const fileBlob = fs.readFileSync("./themes.json");
   const fileJson = JSON.parse(fileBlob.toString());
