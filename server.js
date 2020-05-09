@@ -7,9 +7,15 @@ const getThemes = require("./get-themes");
 const app = express();
 const port = 3001;
 
-cron.schedule("0 0 * * *", () => {
-  getThemes();
-});
+cron.schedule(
+  "0 0 * * *",
+  () => {
+    getThemes();
+  },
+  {
+    timezone: "Europe/London",
+  }
+);
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
