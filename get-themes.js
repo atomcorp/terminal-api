@@ -18,6 +18,7 @@ const baseUrl =
   "https://api.github.com/repos/mbadolato/iTerm2-Color-Schemes/contents/windowsterminal/";
 const customSchemesUrl =
   "https://api.github.com/repos/atomcorp/themes/contents/src/custom-colour-schemes.json";
+const devCustomSchemesUrl = "http://localhost:3000/custom-colour-schemes.json";
 
 // add boolean whether the theme is a light or dark
 const assignColourType = (themes) => {
