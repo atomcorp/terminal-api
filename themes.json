@@ -4774,6 +4774,28 @@
     "isDark": true
   },
   {
+    "name": "Vintage",
+    "foreground": "#C0C0C0",
+    "background": "#000000",
+    "black": "#000000",
+    "red": "#800000",
+    "green": "#008000",
+    "yellow": "#808000",
+    "blue": "#000080",
+    "purple": "#800080",
+    "cyan": "#008080",
+    "white": "#C0C0C0",
+    "brightBlack": "#808080",
+    "brightRed": "#FF0000",
+    "brightGreen": "#00FF00",
+    "brightYellow": "#FFFF00",
+    "brightBlue": "#0000FF",
+    "brightPurple": "#FF00FF",
+    "brightCyan": "#00FFFF",
+    "brightWhite": "#FFFFFF",
+    "isDark": true
+  },
+  {
     "name": "Violet Dark",
     "black": "#56595c",
     "red": "#c94c22",
