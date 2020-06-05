@@ -41,3 +41,45 @@ total themes: 227
 date: 5/22/2020
 total themes: 227
 =======
+date: 5/23/2020
+total themes: 227
+=======
+date: 5/24/2020
+total themes: 227
+=======
+date: 5/25/2020
+total themes: 228
+=======
+date: 5/26/2020
+total themes: 229
+=======
+date: 5/27/2020
+total themes: 230
+=======
+date: 5/28/2020
+total themes: 231
+=======
+date: 5/29/2020
+total themes: 232
+=======
+date: 5/30/2020
+total themes: 232
+=======
+date: 5/31/2020
+total themes: 232
+=======
+date: 6/1/2020
+total themes: 232
+=======
+date: 6/2/2020
+total themes: 232
+=======
+date: 6/3/2020
+total themes: 232
+=======
+date: 6/4/2020
+total themes: 231
+=======
+date: 6/5/2020
+total themes: 231
+=======
